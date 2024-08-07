@@ -1,0 +1,410 @@
+/* Basic styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #6699CC; /* Default to light mode background */
+    color: #333; /* Default to light mode text color */
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    position: relative;
+}
+
+.mode-switch {
+    display: flex;
+    margin-right: 10px;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: row-reverse;
+    transition: transform 0.8s;
+}
+
+.mode-label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 5px;
+    border: 2px solid #add8e6; /* Light blue border color */
+    border-radius: 20px;
+    background-color: #fff; /* Light mode background color */
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.sun-icon, .moon-icon {
+    font-size: 24px;
+    margin: 0 5px;
+    transition: opacity 0.3s;
+}
+
+#mode-toggle {
+    display: none;
+}
+
+#mode-toggle:checked ~ .mode-label .sun-icon {
+    opacity: 0;
+}
+
+#mode-toggle:not(:checked) ~ .mode-label .moon-icon {
+    opacity: 0;
+}
+
+main {
+    flex: 1;
+    display: flex;
+}
+
+.container {
+    display: flex;
+    max-width: 1400px;
+    margin: 20px auto;
+    width: 100%;
+}
+
+.left-column, .right-column {
+    padding: 20px;
+    background: rgba(240, 240, 240, 0.8); /* Light mode background */
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(211, 211, 211, 0.3); /* Softer border color */
+    transition: background 0.3s, color 0.3s;
+}
+
+.left-column {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.right-column {
+    flex: 2;
+    margin-left: 20px;
+}
+
+section h2, section h3 {
+    font-size: 1.5em; /* Make the title smaller */
+    margin-bottom: 10px;
+}
+
+.about-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.about-header h2 {
+    margin-left: 10px;
+}
+
+.about-header img {
+    max-width: 160px; /* Keep the original size */
+    border-radius: 20%; /* Make it round 50% */
+    transition: transform 0.3s;
+}
+
+.about-header img:hover {
+    transform: scale(1.1);
+}
+
+.name {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: baseline;
+}
+
+.pronounce {
+    font-size: 0.9em;
+    margin-left: 10px;
+    color: #b0b0b0;
+    font-style: italic;
+}
+
+.role {
+    font-size: 1em;
+    margin-left: 10px;
+    color: #b0b0b0;
+    font-weight: bold;
+    margin: 0;
+    padding-bottom: 10px;
+}
+
+.blocksatz {
+    text-align: justify;
+}
+
+.divider {
+    border: none;
+    border-top: 2px solid #add8e6; /* Light blue color */
+    margin: 10px 0;
+}
+
+/* Social media styles */
+#social-media {
+    margin-top: 20px;
+}
+
+#sozial {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 10px;
+}
+
+#sozial a {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+#sozial img {
+    height: 32px;
+    width: 32px;
+    transition: transform 0.3s;
+}
+
+#sozial img:hover {
+    transform: scale(1.2);
+}
+
+.skillslist {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+    flex-direction: row;
+}
+
+#icon {
+    filter: invert(0%);
+}
+
+.skills-list {
+    list-style: none;
+    padding: 0;
+}
+
+.skills-list li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.skill-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+.button-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    max-width: 400px;
+}
+
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    border-radius: 8px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.button i {
+    margin-right: 10px;
+}
+
+.discord { background-color: #5865F2; }
+.donate { background-color: #ED4245; }
+.twitter { background-color: #1b272f; }
+.anilist { background-color: #02A9FF; }
+.youtube { background-color: #FF0000; }
+.github { background-color: #333; }
+
+.button:hover {
+    opacity: 0.8;
+}
+
+/* Right Column */
+
+/* Project card styles */
+.project-card {
+    perspective: 1000px;
+    margin: 10px;
+    flex: 1 1 calc(33.33% - 20px); /* Three columns in one row */
+    box-sizing: border-box;
+}
+
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 100px; /* Set height to 100px */
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.project-card:hover .card-inner {
+    transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.card-front {
+    background: rgb(255, 255, 255); /* Light mode background */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(211, 211, 211, 0.3); /* Softer border color */
+    display: flex;
+    align-items: center;
+}
+
+.project-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    margin-right: 15px;
+}
+
+.project-details {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.project-details h3 {
+    font-size: 1em; /* Make the title smaller */
+    margin: 0;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap; /* Allow wrapping to the next line */
+}
+
+.project-details .badge {
+    background-color: #4caf50;
+    color: white;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 0.8em;
+    margin-left: 10px;
+}
+
+.project-details p {
+    font-size: 0.9em; /* Make the description smaller */
+    margin: 5px 0 0;
+    color: #b0b0b0;
+}
+
+.card-back {
+    background: rgba(51, 51, 51, 0.8);
+    color: #fff;
+    transform: rotateY(180deg);
+    text-align: center;
+}
+
+/* Flexbox container for project cards */
+.projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start; /* Align items at the start */
+}
+
+/* Dark mode styles */
+body.dark-mode {
+    background-color: #181818; /* Dark mode background */
+    color: #e0e0e0; /* Dark mode text color */
+}
+
+body.dark-mode .left-column, 
+body.dark-mode .right-column {
+    background: rgba(18, 18, 18, 0.8); /* Dark mode background */
+    border: 1px solid rgba(255, 255, 255, 0.1); /* Dark mode border color */
+}
+
+body.dark-mode #icon {
+    filter: invert(100%);
+}
+
+body.dark-mode .card-front {
+    background: rgba(18, 18, 18, 0.8); /* Dark mode background */
+    border: 1px solid rgba(255, 255, 255, 0.1); /* Dark mode border color */
+}
+
+body.dark-mode .card-back {
+    background: rgba(51, 51, 51, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.1); /* Dark mode border color */
+}
+
+body.dark-mode .mode-label {
+    background-color: #333;
+    border-color: #ff8c00; /* Dark orange border color */
+}
+
+body.dark-mode .divider {
+    border-top: 2px solid #ff8c00; /* Dark orange color */
+}
+
+/* Text selection highlight color */
+::selection {
+    background: #add8e6; /* Light blue background */
+    color: #333; /* Dark text color */
+}
+
+body.dark-mode ::selection {
+    background: #ff8c00; /* Dark orange background */
+    color: #fff; /* White text color */
+}
+
+/* Responsive design */
+@media (max-width: 1024px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .left-column, .right-column {
+        margin: 0;
+    }
+
+    .right-column {
+        flex: 1;
+    }
+
+    .projects-container {
+        justify-content: center;
+    }
+
+    .project-card {
+        flex: 1 1 calc(50% - 20px); /* Two columns in one row on smaller screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .project-card {
+        flex: 1 1 calc(100% - 20px); /* One column in one row on small screens */
+    }
+}

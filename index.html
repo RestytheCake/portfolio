@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RestytheCake - Portfolio</title>
+    <link rel="icon" href="img/github_pfp.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class="dark-mode"> <!-- Set default mode to dark -->
+    <div class="wrapper">
+        <main>
+            <div class="container">
+                <div class="left-column">
+                    <section id="about">
+                        <div class="mode-switch">
+                            <input type="checkbox" id="mode-toggle" checked> <!-- Set default to checked -->
+                            <label for="mode-toggle" class="mode-label">
+                                <span class="sun-icon">☀️</span>
+                                <span class="moon-icon">🌙</span>
+                            </label>
+                            <div class="about-header">
+                                <img src="img/github_pfp.png" alt="GitHub Profile Picture">
+                            </div>
+                        </div>
+                        <div class="name">
+                            <h2>RestytheCake</h2>
+                            <p class="pronounce">He/Him</p>
+                        </div>
+                        <p class="role">&nbsp;&nbsp;&lt;/Fullstack&gt;</p>
+                        
+                            <p class="blocksatz">/* Hi, I'm Resty. I'm a developer who loves to create things. I'm currently learning Rust and working on various projects such as Webapp's, Applications, Mobile Apps, Automated Services, Discord Bots etc.. */</p>
+                            <p class="blocksatz">/* In the past I tried various things like making Mods for Minecraft and Terraria and creating community websites like EDGFS */</p>
+                    </section>
+
+                    <section id="skills">
+                        <div class="skillslist">
+                            <div class="good">
+                                <h3>Accomplished</h3>
+                                <ul class="skills-list">
+                                    <li><img src="img/icons/python.svg" alt="Python" class="skill-icon"> Python</li>
+                                    <li><img src="img/icons/js.svg" alt="JavaScript" class="skill-icon"> JavaScript</li>
+                                    <li><img src="img/icons/html.svg" alt="html" class="skill-icon"> HTML</li>
+                                </ul>
+                            </div>
+                            <div class="learning">
+                                <h3>Exploring</h3>
+                                <ul class="skills-list">
+                                    <li><img src="img/icons/rust.svg" alt="Rust" class="skill-icon" id="icon"> Rust</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="social-media">
+                        <div class="button-container">
+                            <a href="https://github.com/RestytheCake/" class="button github">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                            <a href="https://discord.gg/pRGFQ2jJgh" class="button discord">
+                                <i class="fab fa-discord"></i> Discord
+                            </a>                           
+                            <a href="https://x.com/morganischkalt" class="button twitter">
+                                <svg class="skill-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"/></svg> X / Twitter
+                            </a>
+                            <a href="https://anilist.co/user/Ganes23/" class="button anilist">
+                                <img src="img/icons/anilist.svg" alt="AniList" class="skill-icon"> AniList
+                            </a>
+                            
+                          </div>
+                        
+                    </section>
+                </div>
+
+                <div class="right-column">
+                    <h2>Projects</h2>
+                    <section id="github-projects">
+                        <h3>GitHub Projects</h3>
+                        <hr class="divider">
+                        <div class="projects-container">
+                            <!-- Hardcoded project cards -->
+                            <div class="project-card">
+                                <div class="card-inner">
+                                    <div class="card-front">
+                                        <div class="project-details">
+                                            <h3>Re-Tanpopo <span class="badge">App</span></h3>
+                                            <p>Tanpopo is an anime UI to streamline your watching experience.</p>
+                                        </div>
+                                    </div>
+                                    <div class="card-back">
+                                        <p>Additional details about Re-Tanpopo.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="project-card">
+                                <div class="card-inner">
+                                    <div class="card-front">
+                                        <div class="project-details">
+                                            <h3>Tanpopo <span class="badge App">App</span></h3>
+                                            <p>The Original bad written Tanpopo <br> -> Check Re-Tanpopo.</p>
+                                        </div>
+                                    </div>
+                                    <div class="card-back">
+                                        <p>Additional details about Tanpopo.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="project-card">
+                                <div class="card-inner">
+                                    <div class="card-front">
+                                        <div class="project-details">
+                                            <h3>Shiny_Material <span class="badge Mod">Mod</span></h3>
+                                            <p>A Minecraft Mod for Forge 1.16.5.</p>
+                                        </div>
+                                    </div>
+                                    <div class="card-back">
+                                        <p>Additional details about Shiny_Material.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="project-card">
+                                <div class="card-inner">
+                                    <div class="card-front">
+                                        <div class="project-details">
+                                            <h3>Shiny Terrarira <span class="badge Mod">Mod</span></h3>
+                                            <p>A Terraria TModLoader Mod.</p>
+                                        </div>
+                                    </div>
+                                    <div class="card-back">
+                                        <p>Additional details about Shiny_Material_for_Terrarira.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="project-card">
+                                <div class="card-inner">
+                                    <div class="card-front">
+                                        <div class="project-details">
+                                            <h3>edgermanflexapp <span class="badge Mobile">Mobile</span></h3>
+                                            <p>EDGF Mobile App (Android).</p>
+                                        </div>
+                                    </div>
+                                    <div class="card-back">
+                                        <p>Additional details about edgermanflexapp.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="project-card">
+                                <div class="card-inner">
+                                    <div class="card-front">
+                                        <div class="project-details">
+                                            <h3>EDGFS <span class="badge Webapp">Webapp</span></h3>
+                                            <p>EDGF Community Site.</p>
+                                        </div>
+                                    </div>
+                                    <div class="card-back">
+                                        <p>Additional details about EDGFS.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="project-card">
+                                <div class="card-inner">
+                                    <div class="card-front">
+                                        <div class="project-details">
+                                            <h3>Meier <span class="badge Website">Website</span></h3>
+                                            <p>A School Project Site.</p>
+                                        </div>
+                                    </div>
+                                    <div class="card-back">
+                                        <p>Additional details about Meier.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="project-card">
+                                <div class="card-inner">
+                                    <div class="card-front">
+                                        <div class="project-details">
+                                            <h3>EDGERMANFLEXCHANNEL <span class="badge Webapp">Website</span></h3>
+                                            <p>First EDGF Site.</p>
+                                        </div>
+                                    </div>
+                                    <div class="card-back">
+                                        <p>Additional details about EDGERMANFLEXCHANNEL.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Add more project cards as needed -->
+                        </div>
+                    </section>
+                    <section id="other-projects">
+                        <h3>Other Projects</h3>
+                        <hr class="divider">
+                        <div class="projects-container">
+                            <!-- Other hardcoded project cards -->
+                            <div class="project-card">
+                                <div class="card-inner">
+                                    <div class="card-front">
+                                        <div class="project-details">
+                                            <h3>Project Title 1 <span class="badge">App</span></h3>
+                                            <p>Description of the project...</p>
+                                        </div>
+                                    </div>
+                                    <div class="card-back">
+                                        <p>Additional details about Project Title 1.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Add more project cards as needed -->
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="js/index.js"></script>
+</body>
+</html>
